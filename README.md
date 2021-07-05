@@ -1,0 +1,2 @@
+# This app written in Python, Django and with a bit of css and Ajax demonstrates the use of API. Here multiple API's are linked together to provide real information.
+<h2><justify>This App uses different API's to automatically sense the User's country and display him the news of his country automatically. For News api, fetch api from https://newsapi.org/. Obtain the API and then head for main/views.py and in line 7, after the variable `api_key`, add your API key within the quotes. </p></h2>
