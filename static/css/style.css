@@ -36,12 +36,3 @@ body {
     background-color: #e9ecef;
     font-family: "Cabin", sans-serif;
 }
-footer {
-    height: 70px;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-    color: white;
-    font-size: 20px;
-    padding-top: 10px;
-}

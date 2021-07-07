@@ -3,12 +3,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>DjangoNews</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="https://assets.materialup.com/uploads/d7a3f072-f004-43e0-bdad-b55a4b36e24e/preview.png" type="image/png" class="rounded-circle">
 </head>
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-<body>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">DjangoNews</a>
@@ -23,6 +24,15 @@
         <br>
         <div>
             <center><b><h4 id="time"></h4></b></center>
+        </div>
+        <div class="card" style="width: 500px; margin: auto; margin-bottom: 10px;">
+                <h4 class="card-header"><center>{{ region }}</center></h4>
+            <div class="card-text">
+                <br>
+                <center><h2>{{ weather_list.temp }} °C</h2></center>
+                <br>
+            </div>
+            <h5 class="card-footer" style="margin-bottom: 0;"><center><i>{{ weather_list.description }}</i></center></h5>
         </div>
         <section>
             {% for author, title, description, url, image in zipped %}
@@ -47,9 +57,10 @@
             {% endfor %}
         </section>
     </div>
-    <footer class="bg-dark">
+    <br>
+    <section style="height: 50px; color: white; padding: 7px; bottom: 0; margin-top: auto;" class="bg-dark">
         <center><b>Copyright ©, DjangoNews {{ year }}</b></center>
-    </footer>
+    </section>
 </body>
 <script src="{% static 'js/time.js' %}"></script>
 </html>
